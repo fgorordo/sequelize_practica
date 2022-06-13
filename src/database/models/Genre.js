@@ -1,5 +1,4 @@
 module.exports = (sequelize, dataTypes) => {
-  let alias = 'Genre'
   let cols = {
     id: {
       type: dataTypes.INTEGER,
@@ -31,7 +30,7 @@ module.exports = (sequelize, dataTypes) => {
     }
   }
 
-  const Genre = sequelize.define(alias, cols, {
+  const Genre = sequelize.define('Genre', cols, {
     timestamp: true,
     underscored:true
   })

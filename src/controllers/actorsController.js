@@ -1,7 +1,7 @@
 const db = require('../database/models/index.js');
 
 const actorsController = {
-  list: async function (req, res,next) {
+  list: async function (req, res) {
     try {
       let actors = await db.Actor.findAll()
       if(actors) {
@@ -14,7 +14,6 @@ const actorsController = {
     } catch (error) {
       res.send(error);
     }
-    next()
   },
   details: async function (req, res) {
     try {
